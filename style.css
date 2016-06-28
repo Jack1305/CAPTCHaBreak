@@ -1,0 +1,138 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+
+}
+
+html {
+	background-color: #E5E5E5;
+	color: #000000;
+}
+
+body {
+	max-width: 65em;
+	margin: auto;
+}
+#lang {
+	float: right;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	font-size: 0.8em;
+}
+
+#lang_switch {
+	text-decoration: underline;
+	font-weight: bold;
+	border: #000000 1px solid;
+}
+
+#lang_switch_selected {
+	text-decoration: none;
+	font-weight: bold;
+	opacity: 0.3;
+	border: #000000 1px solid;
+}
+
+p {
+	margin-bottom: 0.2em;
+}
+
+h1 {
+	text-align: center;
+	text-shadow: 1px 1px 1px #F00;
+	margin-bottom: 0.3em;
+}
+h2{
+	margin-bottom: 0.3em;
+}
+div{
+	background-color: #FFFFFF;
+	margin: 2%;
+	padding: 1%;
+	box-shadow: 0px 0px 5px 5px #888888;
+}
+#highscores * {
+	text-align: center;
+	margin: auto;
+}
+form {
+	border: #0000FF 3px solid;
+	padding: 1%;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+input[type=submit] {
+	margin-top: 10px;
+	font-size: 1.5em;
+}
+form label {
+	font-weight: bold;
+}
+form * {
+	font-size: 1em;
+	color: #000033;
+	display: block;
+}
+canvas {
+	border:1px solid #FF0000;
+	background-color: #000000;
+	margin: auto;
+}
+table{
+	width:60%; 
+	border-spacing: 0.2em;
+}
+table td{ 
+	padding:7px;
+}
+table th{
+	border:#000000 2px solid;
+}
+
+table tr{
+	background: #707070;
+}
+table tr:nth-child(odd){ 
+	background: #CCCCCC;
+}
+table tr:nth-child(even){
+	background: #999999;
+}
+table caption{
+	font-size: 2em;
+	padding-bottom: 0.5em;
+	text-align: center;
+	font-weight: bold;
+}
+span {
+	font-weight: bold;
+}
+#success {
+	color: #00FF00;
+}
+#failure {
+	color: #FF0000;
+}
+
+/* 'star-rating' component */
+div .nostyle, div .starRate {
+	margin: 0%;
+	padding: 0%;
+	box-shadow: none;
+	border: none;
+}
+.starRate span { font-weight: normal;font-size: 0.8em;}
+.starRate {position:relative; margin:20px; overflow:hidden; zoom:1;}
+.starRate ul {width:160px; margin:0; padding:0;}
+.starRate li {display:inline; list-style:none;}
+.starRate a, .starRate b {background:url(star_rate.gif) left top repeat-x;}
+.starRate a {float:right; margin:0 80px 0 -144px; width:80px; height:16px; background-position:left 0px; color:#000; text-decoration:none;}
+.starRate a:active,.starRate a:focus,.starRate a:hover {background-position:left -32px;}
+.starRate b {position:absolute; z-index:-1; width:80px; height:16px; background-position:left -16px;}
+.starRate div b {left:0px; bottom:0px; background-position:left top;}
+.starRate a span {position:absolute; left:-300px;}
+.starRate a:active span,.starRate a:focus span,.starRate a:hover span {left:90px; width:100%;}
+.selected {background-position:left -16px !important;}
+
+
