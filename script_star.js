@@ -264,8 +264,8 @@ function compute_coords(mousex, mousey) {
   return coords;
 }
 
+// Computes the ratio of "filled" squares (those that have at least a single point in them)
 function compute_fill_ratio(coords, num_bins) {
-  // canvas.width .height
 
   var CNT = Array(num_bins);
   for(var i = 0; i < num_bins; ++i) {
@@ -273,8 +273,6 @@ function compute_fill_ratio(coords, num_bins) {
     for(var j = 0; j < num_bins; ++j)
       CNT[i][j] = 0;
   }
-
-  //  debugger;
 
   var bin_size = canvas.width / num_bins;
   for(var i = 0; i < coords.length; ++i) {
@@ -294,7 +292,12 @@ function compute_fill_ratio(coords, num_bins) {
   return sum / (num_bins * num_bins);
 }
 
+
+// Finds the coordinate which has the smallest number of "filled" squares
 function find_min_fill_ratio(num_bins) {
+  // default num_bins to 20 if not specified
+  num_bins = num_bins || 20;
+
   var step = 5;
   var best = [0, 0, 100];
   for(var can_x = 0; can_x < canvas.width; can_x += step)
@@ -311,6 +314,7 @@ function find_min_fill_ratio(num_bins) {
   return best[2];
 }
 
+// Given the coordinates of the stars, update the canvas
 function draw_coords(coords) {
   //puliamo il canvas
   // Store the current transformation matrix
@@ -332,6 +336,7 @@ function draw_coords(coords) {
 
 }
 
+// Recompute the coordinates of the stars and update the canvas
 function disegna(mousex,mousey) {
   var coords = compute_coords(mousex, mousey);
   console.log(compute_fill_ratio(coords, 10));
